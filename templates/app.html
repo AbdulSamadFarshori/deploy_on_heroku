@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <title>Chatbot</title>
+
+             
+        
+        <style>
+            .you{
+
+                width: 200px;
+                background-color: rgb(79, 137, 245);
+                margin-left: 58%;
+                margin-top: 200px;
+                margin-right:px;
+                padding:20px;
+                border: 1px solid gray;
+                box-shadow: 1px 2px 4px gray;
+                opacity: 1;
+                color: white;
+                text-align: center;
+                
+                
+                
+            }
+            .user_msg{
+                margin-left: 10px;
+            }
+
+            .chatbot{
+                width: 200px;
+                background-color:rgb(79, 137, 245);
+                margin-right: 70%;
+                margin-top:200x;
+                margin-left:5px;
+                padding:20px;
+                border: 1px solid gray;
+                box-shadow: 1px 2px 4px gray;
+                opacity: 1;
+                color: white;
+                text-align: center;
+
+            }
+            .chatbot_msg{
+                
+                margin-left: 10px;
+                
+
+
+            }
+
+            
+            body{
+                position: relative;
+                background: url('../static/img/bot2.jpg');
+                background-repeat: no-repeat;
+                background-size: 1500px 690px;
+                margin:0px;
+                
+            
+
+                 
+            }
+
+            
+
+            .msg_area{
+                position: absolute;
+                background-color: rgb(231, 223, 225);
+                height: 540px;
+                overflow: hidden;
+                width: 604px;
+                box-shadow: 0px 3px 10px gray;
+                opacity: 0.8;
+                border-radius: 10px;
+                margin-top: 2px;
+                top:55px;
+                left:380px;
+            }
+            #fname{
+                margin-left: 15px;
+                width: 420px;
+                height: 25px;
+            }
+            
+            .bar{
+                position: absolute;
+                width: 606px;
+                height: 45px;
+                left:380px;
+                background-color:cornflowerblue;
+                margin-top: 8px;
+                box-shadow: 0px 1px 4px rgb(3, 0, 0);
+                border-radius: 10px;
+
+            }
+            .form{
+                position: absolute;
+                top:610px;
+                left:430px;
+            }
+            
+
+            .bar2{
+                position: absolute;
+                width: 606px;
+                height: 45px;
+                background-color:cornflowerblue;
+                top: 598px;
+                left:380px;
+                z-index: -1;
+                box-shadow: 0px 5px 10px rgb(3, 0, 0);
+                border-radius: 10px;
+            }
+
+            .na{
+                position: absolute;
+                top:-5px;
+                left:400px;
+                color: rgb(223, 232, 250);
+                
+
+
+            }
+            .na.h1{
+                text-shadow: 5px 10px 10px gray;
+                text-align: center;
+
+            }
+            .box{
+                position:absolute;
+                background-color: cornflowerblue;
+                width: 305px;
+                height: 400px;
+                left: 30px;
+                top: 70px;
+                box-shadow: 0px 2px 6px black;
+                opacity: 0.8;
+                color:  rgb(223, 232, 250);
+                text-align: center;
+
+            }
+            .box1{
+                position:absolute;
+                background-color: cornflowerblue;
+                width: 300px;
+                height: 350px;
+                left: 1020px;
+                top: 50px;
+                box-shadow: 0px 2px 6px black;
+                opacity: 0.8;
+                text-align: center;
+
+            }
+            .about{
+                color:rgb(223, 232, 250);
+                width: 280px;
+                text-align: center;
+                padding:10px;
+            }
+            .contact{
+                position: absolute;
+                top:560px;
+                left:1070px;
+                background-color: rgb(79, 137, 245);
+                width:200px;
+                height: 80px;
+                box-shadow: 0px 2px 6px black;
+                opacity: 0.7;
+                color: rgb(223, 232, 250);
+                text-align: center;
+            }
+            .link{
+                margin-top: 10px;
+            }
+
+            @media screen and (max-width: 150px){
+                
+
+            }
+
+        </style>
+    </head>
+    <body class='body'>
+        <div>
+            <div class='cen'>
+                <div class='contact'>
+                    <div><h2>For Contact</h2></div>
+                    <div class='link'>
+                        <a  href=linkedin.com/in/abdul-samad-farshori>Click Here</a>
+                    </div>
+                </div>
+                <div class='bar'></div>
+                <div class='bar2'></div>
+                <div class='box'>
+                    <div class='text1'>
+                        <h4>IMPORTANT<br><br>
+                        - This chatbot has only 900 words same like 3 years old kid.<br><br>
+                        - It is better to ask introduction questions.<br><br>
+                        - It doesn't understand punctuations and symbols.<br><br>
+                        - It doesn't understand abbreviations.<br><br> 
+                        - It doesn't understand slang words.<br><br>
+                        - Do not use these words likes 'gonna', 'wanna', etc.<br><br>
+                        - It doesn't understand apostrophe words like 'I'll', Don't, etc.<br><br>
+                        - For training purpose your questions will be kept.</h4>
+
+                    </div>
+                </div>
+                <div class= 'box1'>
+                    <div class='about'>
+                        <h2>About</h2><br>
+                        <p>it is a chatbot which is trained on deep learning model.
+                            so far it has just 900 words in its dictionary which
+                            is the same like a three years old kid. it is trying 
+                            to learn which word is the best for using in the 
+                            context.<br><br>'Seq2Seq' deep learning model
+                            it is combination of encoder and decoder where encoder model takes 
+                            questions as input and pass the final states to decoder model it takes
+                            states and starting word token to predict first word of the answer.
+                            on the basis of first word and updated states it predicts second word 
+                            and it goes on until it gets the ending word token.
+
+
+
+                        </p>
+
+                    </div>
+                </div>
+                
+                <div class ='na'>
+                    <h1>Adam</h1>
+                </div>
+                <div class='msg_area',id="mes">
+                    <div id="user"></div>
+                        <h2 class="you">{{text}}</h2>
+                        <h2 class="chatbot">{{text1}}</h2>
+                </div>
+                <div class='form'>
+                    <form action= "/predict", method="post">
+                        <input type='text', name='text', placeholder="type here...", size=60, class='input'>
+                        <input type="submit" value="Send",class='btn'>
+                    </form>
+                    <!-- <button onclick="myfunc()">Click Me</button> -->
+                </div>
+
+            </div>
+        </div>   
+    </body>
+</html>
